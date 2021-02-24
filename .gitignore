@@ -5,6 +5,6 @@ src/*
 gulpfile.js
 package-lock.json
 package.json
-/dist/*
-!/dist/assets/
-!/dist/index.html
+# /dist/*
+# !/dist/assets/
+# !/dist/index.html
