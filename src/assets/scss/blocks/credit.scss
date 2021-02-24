@@ -1,0 +1,34 @@
+.credit{
+    background:url("../images/cirkle-left.png") no-repeat left bottom, 
+                url("../images/cirkle-right.png") no-repeat right top, 
+                radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%);
+    background-size: 350px, 500px, cover;
+
+    &__info{
+        background: url("../images/men.png") no-repeat right -60px bottom;
+        background-size: 700px;
+    }
+    &__footer{
+        padding-bottom: 127px;
+    }
+}
+
+@include breackpoint($miniDesktop-width){
+    .credit{
+        &__info{
+            background: url("../images/men.png") no-repeat right -120px bottom;
+            background-size: 650px;
+        }
+    }
+}
+
+@include breackpoint($tablet-width){
+    .credit{
+        &__info{
+            background: none;
+        }
+        &__footer{
+            padding-bottom: 40px;
+        }
+    }
+}

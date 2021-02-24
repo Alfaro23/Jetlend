@@ -1,0 +1,24 @@
+.company{
+    background: #fff;
+    // margin-right: 6px;
+    min-width: 169px;
+    min-height: 121px;
+    width: 10%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .3s linear;
+
+    &:hover{
+        background: darken($color: $primaryGreenColor, $amount: 10);
+    }
+}
+
+@include breackpoint($miniDesktop-width){
+    .company{
+        margin-bottom: 10px;
+        width: 23%;
+    }
+}

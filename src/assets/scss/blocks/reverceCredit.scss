@@ -1,0 +1,102 @@
+.reverceCredit{
+    background: url("../images/central_cirkle.png") top 0 center no-repeat ,radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%);
+    position: relative;
+    height: 568px;
+    z-index: 1;
+
+    &__title{
+        @include fontSettings("Red Hat Display", normal, 500, 35px, 47px);
+        color: #fff;
+        text-align: center;
+        padding-top: 82px;
+        margin-bottom: 44px;
+    }
+    &__steps{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding-bottom: 76px;
+    }
+    &__number{
+        border-radius: 50%;
+        border: 5px solid $primaryGreenColor;
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+
+        &--active{
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background-color: $primaryGreenColor;
+            background-clip: content-box;
+            border: 10px solid;
+            border-color: rgba(14, 209, 147, 0.25);
+        }
+
+    }
+    &__stepNumber{
+        margin: auto;
+        @include fontSettings("Red Hat Display", normal, 500, 15px, 20px);
+    }
+    &__step1, &__step2, &__step3{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+    }
+    &__point{
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8px;
+        
+    }
+    &__step1{
+        .reverceCredit__point{
+                .pre-line{
+                    visibility: hidden;
+                }  
+        }
+    }
+    &__step3{
+        .reverceCredit__point{
+                .post-line{
+                    visibility: hidden;
+                }  
+        }
+    }
+
+    &__description{
+        max-width: 223px;
+        text-align: center;
+        @include fontSettings("Red Hat Display", normal, 300, 15px, 20px);
+    }
+}
+
+.pre-line, .post-line{
+    width: 100%;
+    height: 1px;
+    background: $primaryGreenColor;
+}
+
+@include breackpoint($mobile-width){
+    .reverceCredit{
+        &__title{
+            @include fontSettings("Red Hat Display", normal, 500, 30px, 47px);
+            color: #fff;
+            text-align: center;
+            padding-top: 12px;
+            margin-bottom: 24px;
+        }
+        &__steps{
+            padding-bottom: 25px;
+        }
+        &__description{
+            @include fontSettings("Red Hat Display", normal, 300, 10px, 20px);
+        }
+    }
+}

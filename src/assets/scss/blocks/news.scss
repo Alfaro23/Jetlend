@@ -1,0 +1,40 @@
+.news{
+    background: #F0F5F6;
+    padding-top: 334px;
+    &__title{
+        margin-top: 50px;
+        text-align: center;
+        @include fontSettings("Red Hat Display", normal, 700, 35px, 47px);
+        padding-bottom: 35px;
+        margin-bottom: 0;
+    }
+    &__titleLink{
+        color: $primaryGreenColor;
+        text-decoration-style: dashed;
+        margin-left: 28px;
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding-bottom: 72px;
+        flex-wrap: wrap;
+    }
+}
+
+
+@include breackpoint($miniTablet-width){
+    .news{
+        padding-top: 500px;
+    }
+}
+
+@include breackpoint($mobile-width){
+    .news{
+        padding-top: 400px;
+
+        &__title{
+            @include fontSettings("Red Hat Display", normal, 700, 30px, 47px);
+        }
+    }
+}

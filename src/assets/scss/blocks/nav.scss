@@ -1,0 +1,54 @@
+.nav{
+
+    @include fontSettings("Red Hat Display", normal, 600, 18px, 19px);
+    
+    &__item{
+        text-decoration: none;
+        color: #000000;
+
+        &:not(:last-child){
+            padding-right: 40px;
+        }
+        &:hover{
+            text-decoration: underline $primaryGreenColor;
+        }
+        &--footer{
+            color: #fff;
+            @include fontSettings("Red Hat Display", normal, 500, 14px, 19px);
+            margin-bottom: 6px;
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+
+    &--footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@include breackpoint($miniDesktop-width){
+    .nav{
+        &__item{
+            &:not(:last-child){
+                padding-right: 10px;
+            }
+        }
+    }
+}
+@include breackpoint($miniTablet-width){
+    .nav{
+        &--header{
+            display: none;
+        }
+    }
+    .contentHeader{
+        .fa-align-justify{
+            display: block;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    }
+}

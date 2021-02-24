@@ -1,0 +1,38 @@
+.navCredit{
+    padding-top: 20px;
+
+    &__item{
+        text-decoration: none;
+        @include fontSettings("Red Hat Display", normal, 500, 16px, 21px);
+        color: #fff;
+
+        &:not(:last-child)::after{
+
+            content: "";
+            width: 1px;
+            height: 10px;
+            margin: 0 22px;
+            background-color: $primaryGreenColor;
+            border: .5px solid $primaryGreenColor;
+        }
+    }
+    &__img{
+        margin-left: 10px;
+    }
+}
+
+@include breackpoint($mobile-width){
+    .navCredit{
+        &__item{
+            &:not(:last-child)::after{
+
+                content: "";
+                width: 1px;
+                height: 10px;
+                margin: 0 10px;
+                background-color: $primaryGreenColor;
+                border: .5px solid $primaryGreenColor;
+            }
+        }
+    }
+}

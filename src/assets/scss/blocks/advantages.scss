@@ -1,0 +1,66 @@
+.advantages{
+    &__title{
+        @include fontSettings("Red Hat Display", normal, 700, 35px, 47px);
+        text-align: center;
+        margin: 60px 0 37px 0;
+    }
+    &__body{
+        display: flex;
+        margin-bottom: 65px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &__block{
+        width: 20%;
+        background: #F0F5F6;
+        // width: 413px;
+        padding: 0 70px 0 50px;
+        justify-content: center;
+        &:not(:last-child){
+            margin-right: 21px;
+        }
+    }
+    &__name{
+        @include fontSettings("Red Hat Display", normal, 700, 25px, 33px);
+        margin: 41px 0 19px 0;
+    }
+    &__descriptions{
+        margin-bottom: 48px;
+        @include fontSettings("Red Hat Display", normal, 300, 13px, 17px);
+    }
+}
+
+@include breackpoint($tablet-width){
+    .advantages{
+        &__block{
+            padding: 0 20px 0 20px;
+        }
+    }
+}
+@include breackpoint($miniTablet-width){
+    .advantages{
+        &__block{
+            margin-bottom: 15px;
+            width: 100%;
+            &:last-child{
+                padding-right: 0;
+                margin-right: 21px;
+            }
+        }
+    }
+}
+@include breackpoint($mobile-width){
+    .advantages{
+        &__title{
+            @include fontSettings("Red Hat Display", normal, 700, 25px, 47px);
+            margin: 10px 0 17px 0;
+        }
+        &__descriptions{
+            margin-bottom: 18px;
+            @include fontSettings("Red Hat Display", normal, 300, 13px, 17px);
+        }
+        &__body{
+            margin-bottom: 10px;
+        }
+    }
+}

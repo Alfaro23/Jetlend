@@ -1,0 +1,16 @@
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+
+@include breackpoint($miniDesktop-width){
+    .container{
+        padding: 0 50px;
+    }
+}
+
+@include breackpoint($mobile-width){
+    .container{
+        padding: 0 20px;
+    }
+}

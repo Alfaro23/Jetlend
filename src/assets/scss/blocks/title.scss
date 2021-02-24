@@ -1,0 +1,28 @@
+.title{
+
+
+    &__description{
+        @include fontSettings("Red Hat Display", normal, 500, 75px, 100px);
+        color: #fff;
+        max-width: 962px;
+        margin-top: 75px;
+    }
+}
+
+@include breackpoint($miniDesktop-width){
+    .title{
+        &__description{
+            max-width: 850px;
+            @include fontSettings("Red Hat Display", normal, 500, 40px, 80px);
+        }
+    }
+}
+
+@include breackpoint($mobile-width){
+    .title{
+        &__description{
+            @include fontSettings("Red Hat Display", normal, 500, 25px, 40px);
+            margin-top: 25px;
+        }
+    }
+}

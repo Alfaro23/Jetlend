@@ -1,0 +1,22 @@
+.nameCategory{
+    display: flex;
+    @include fontSettings("Red Hat Display", normal, normal, 19px, 25px);
+    margin: 26px 0 46px 20px;
+
+    &__link{
+        color: #fff;
+        text-decoration: none;
+        margin-right: 39px;
+    }
+    &__item{
+        list-style: disc;
+        color: $primaryGreenColor;
+        padding: 0;
+    }
+}
+
+@include breackpoint($miniDesktop-width){
+    .nameCategory{
+        flex-direction: column;
+    }
+}

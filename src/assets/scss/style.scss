@@ -1,0 +1,24 @@
+@import "vars";
+@import "./mixins.scss";
+@import "./vender/reset.scss";
+@import url("../fonts/stylesheet.css");
+
+
+
+@import "./blocks/container.scss";
+@import "./blocks/contentHeader.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/navCredit.scss";
+@import "./blocks/title.scss";
+@import "./blocks/nameCategory.scss";
+@import "./blocks/reclam.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/credit.scss";
+@import "./blocks/reverceCredit.scss";
+@import "./blocks/calculator.scss";
+@import "./blocks/news.scss";
+@import "./blocks/company.scss";
+@import "./blocks/preview.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/copyright.scss";

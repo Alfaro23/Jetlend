@@ -1,10 +1,2 @@
 # Игнорировать node_modules.
 node_modules/*
-# Игнорировать src
-src/*
-gulpfile.js
-package-lock.json
-package.json
-# /dist/*
-# !/dist/assets/
-# !/dist/index.html
